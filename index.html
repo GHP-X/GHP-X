@@ -32,24 +32,27 @@
 
         /* Heading Styles */
         h1, h2 {
-            font-size: 2.5rem;
-            text-shadow: 0 0 10px rgba(0, 210, 255, 1);
+            font-size: 3rem;
+            text-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 0 40px rgba(0, 210, 255, 0.6);
             margin-bottom: 20px;
+            letter-spacing: 1.5px;
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 300;
+            margin-bottom: 40px;
         }
 
         /* Paragraphs */
         p {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            line-height: 1.7;
             margin-bottom: 20px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
         }
 
         /* Button Styles */
@@ -57,20 +60,39 @@
             background: none;
             color: #00d2ff;
             padding: 0.75rem 1.5rem;
-            border: none;
+            border: 2px solid #00d2ff;
             border-radius: 25px;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+            transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, border-color 0.3s ease;
             text-decoration: none;
             text-shadow: 0 0 5px rgba(0, 210, 255, 0.8);
             cursor: pointer;
+            display: inline-block;
         }
 
         .button:hover {
             transform: scale(1.1);
             color: #008fb2;
             text-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 0 30px rgba(0, 210, 255, 0.6), 0 0 40px rgba(0, 210, 255, 0.4);
+            border-color: #008fb2;
+        }
+
+        /* Button Text Animation */
+        .button:focus, .button:active {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* Navigation Bar */
@@ -88,10 +110,12 @@
             font-size: 1.1rem;
             font-weight: 500;
             transition: color 0.3s;
+            letter-spacing: 1px;
         }
 
         nav a:hover {
             color: #008fb2;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 1), 0 0 20px rgba(0, 210, 255, 0.6);
         }
 
         /* Section Styles */
@@ -103,6 +127,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
         }
 
         .button-container {
@@ -125,7 +150,7 @@
         <h1>Welcome to GHP X</h1>
         <h2>An Immersive Project Experience</h2>
         <p class="description">
-            GHP X is a revolutionary platform that merges cutting-edge technology with an engaging user experience. The project incorporates advanced features including AI-powered interactions, customizable interfaces, and a seamless integration across multiple devices. It’s designed to empower users and enhance the way they interact with technology. Dive into a new era of digital interaction and explore the possibilities that GHP X has to offer!
+            GHP X is a revolutionary platform that merges cutting-edge technology with an engaging user experience. The project incorporates advanced features including AI-powered interactions, customizable interfaces, and seamless integration across multiple devices. It’s designed to empower users and enhance the way they interact with technology. Dive into a new era of digital interaction and explore the possibilities that GHP X has to offer!
         </p>
         
         <div class="button-container">
