@@ -30,24 +30,24 @@
     <section class="hero fade-in">
       <h2>The safest and most powerful Roblox scripting utility</h2>
       <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
-      <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Download Now</a>
+      <a href="download.html" class="cta-button"><i data-lucide="download" style="margin-right: 8px;"></i> Download Now</a>
     </section>
 
     <section class="features fade-in">
       <h3>Why GHP X?</h3>
       <div class="feature-list">
         <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-shield-alt"></i>
+          <i data-lucide="shield"></i>
           <h4>Safe & Secure</h4>
           <p>Clean codebase, thoroughly tested for stability and safety.</p>
         </div>
         <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-rocket"></i>
+          <i data-lucide="rocket"></i>
           <h4>Blazing Fast</h4>
           <p>Instant execution, optimized threading, no crashes.</p>
         </div>
         <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="500">
-          <i class="fas fa-code"></i>
+           <i data-lucide="code-2"></i>
           <h4>Full Script Support</h4>
           <p>Runs nearly every Lua/U scripts used in the Roblox community.</p>
         </div>
@@ -71,7 +71,19 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
+ <script type="module">
+  import { createIcons, Shield, Rocket, Code2, Download } from 'https://cdn.skypack.dev/lucide';
+
+  createIcons({
+    icons: {
+      Shield,
+      Rocket,
+      Code2,
+      Download
+    }
+  });
+</script>
+
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
