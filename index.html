@@ -6,120 +6,114 @@
   <title>GHP X - Roblox Executor</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="background"></div>
 
   <header class="glass">
-    <h1>Welcome to <span class="highlight">GHP X</span></h1>
-    <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Welcome to <span class="highlight">GHP X</span></h1>
+      <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero fade-in">
-      <h2>The safest and most powerful Roblox scripting utility</h2>
-      <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
-      <a href="download.html" class="cta-button"><i data-lucide="download" style="margin-right: 8px;"></i> Download Now</a>
+    <section class="hero">
+      <div class="container" data-aos="fade-up">
+        <h2>The safest and most powerful Roblox scripting utility</h2>
+        <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
+        <a href="download.html" class="cta-button">
+          <i data-lucide="download"></i> Download Now
+        </a>
+      </div>
     </section>
 
-    <section class="features fade-in">
-      <h3>Why GHP X?</h3>
-      <div class="feature-list">
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="100">
-          <i data-lucide="shield"></i>
-          <h4>Safe & Secure</h4>
-          <p>Clean codebase, thoroughly tested for stability and safety.</p>
-        </div>
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="300">
-          <i data-lucide="rocket"></i>
-          <h4>Blazing Fast</h4>
-          <p>Instant execution, optimized threading, no crashes.</p>
-        </div>
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="500">
-           <i data-lucide="code-2"></i>
-          <h4>Full Script Support</h4>
-          <p>Runs nearly every Lua/U scripts used in the Roblox community.</p>
+    <section class="features" data-aos="fade-up">
+      <div class="container">
+        <h3>Why GHP X?</h3>
+        <div class="feature-list">
+          <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="100">
+            <i data-lucide="shield"></i>
+            <h4>Safe & Secure</h4>
+            <p>Clean codebase, thoroughly tested for stability and safety.</p>
+          </div>
+          <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="300">
+            <i data-lucide="rocket"></i>
+            <h4>Blazing Fast</h4>
+            <p>Instant execution, optimized threading, no crashes.</p>
+          </div>
+          <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="500">
+            <i data-lucide="code-2"></i>
+            <h4>Full Script Support</h4>
+            <p>Runs nearly every Lua/U script used in the Roblox community.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="changelog glass" data-aos="fade-up">
-      <h3>Changelog</h3>
-      <ul>
-        <li><strong>[v1.3.3]</strong> Added whitelist API integration and enhanced anti-crash protection.</li>
-        <li><strong>[v1.3.2]</strong> Improved script injection speed and reduced memory usage.</li>
-        <li><strong>[v1.3.1]</strong> Added new UI customization panel and theme switching.</li>
-        <li><strong>[v1.3.0]</strong> Patched detection vectors to improve bypass methods.</li>
-        <li><strong>[v1.2.9]</strong> Upgraded auto-update system for future-proofing.</li>
-      </ul>
+      <div class="container">
+        <h3>Changelog</h3>
+        <ul>
+          <li><strong>[v1.3.3]</strong> Added whitelist API integration and enhanced anti-crash protection.</li>
+          <li><strong>[v1.3.2]</strong> Improved script injection speed and reduced memory usage.</li>
+          <li><strong>[v1.3.1]</strong> Added new UI customization panel and theme switching.</li>
+          <li><strong>[v1.3.0]</strong> Patched detection vectors to improve bypass methods.</li>
+          <li><strong>[v1.2.9]</strong> Upgraded auto-update system for future-proofing.</li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="glass">
-    <p>© 2025 GHP X. All rights reserved. | <a href="https://github.com/ghp-x">GitHub</a></p>
+    <div class="container">
+      <p>© 2025 GHP X. All rights reserved. | <a href="https://github.com/ghp-x">GitHub</a></p>
+    </div>
   </footer>
 
   <!-- Scripts -->
- <script type="module">
-  import { createIcons, Shield, Rocket, Code2, Download } from 'https://cdn.skypack.dev/lucide';
-
-  createIcons({
-    icons: {
-      Shield,
-      Rocket,
-      Code2,
-      Download
-    }
-  });
-</script>
-
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
+  <script type="module">
+    import { createIcons, Shield, Rocket, Code2, Download } from 'https://cdn.skypack.dev/lucide';
+    createIcons({
+      icons: { Shield, Rocket, Code2, Download }
+    });
   </script>
   <script>
+    AOS.init({ duration: 1000, once: true });
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
-    let textArrayIndex = 0;
-    let charIndex = 0;
+    let textArrayIndex = 0, charIndex = 0;
 
     function type() {
       if (charIndex < textArray[textArrayIndex].length) {
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex++);
         setTimeout(type, 80);
-      } else {
-        setTimeout(erase, 2000);
-      }
+      } else setTimeout(erase, 2000);
     }
 
     function erase() {
       if (charIndex > 0) {
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-        charIndex--;
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, --charIndex);
         setTimeout(erase, 40);
       } else {
-        textArrayIndex++;
-        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        textArrayIndex = (textArrayIndex + 1) % textArray.length;
         setTimeout(type, 500);
       }
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(type, 1000);
-    });
+    document.addEventListener("DOMContentLoaded", () => setTimeout(type, 1000));
   </script>
 </body>
 </html>
