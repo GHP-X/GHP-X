@@ -10,6 +10,27 @@ body {
   height: 100vh;
 }
 
+/* Lucide icon styling */
+i[data-lucide] {
+  width: 32px;
+  height: 32px;
+  color: #00d2ff;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover i[data-lucide] {
+  transform: scale(1.1);
+  color: #00c2e2;
+}
+
+/* Icon inside buttons */
+.cta-button i[data-lucide] {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+
 .background {
   position: absolute;
   top: 0;
