@@ -1,6 +1,5 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <img src="path/to/your-thumbnail.jpg" alt="GHP X Thumbnail" class="thumbnail" />
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
         <h3>Why GHP X?</h3>
         <div class="feature-list">
           <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="100">
-            <i data-lucide="shield"></i>
+            <i data-lucide="shield-check"></i>
             <h4>Safe & Secure</h4>
             <p>Clean codebase, thoroughly tested for stability and safety.</p>
           </div>
@@ -62,23 +62,23 @@
             <i data-lucide="activity"></i>
             <h4>Real-Time Monitoring</h4>
             <p>Keep track of script performance and injection status with real-time logs.</p>
-        </div>
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="900">
+          </div>
+          <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="900">
             <i data-lucide="lock"></i>
             <h4>Whitelist Support</h4>
             <p>Protect your scripts with secure whitelist verification using built-in API hooks.</p>
           </div>
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="1100">
+          <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="1100">
             <i data-lucide="zap"></i>
             <h4>Instant Load</h4>
             <p>Ultra-light engine loads scripts in milliseconds with zero delay.</p>
-        </div>
+          </div>
           <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="1300">
             <i data-lucide="settings"></i>
             <h4>Advanced Settings</h4>
             <p>Customize themes, injection methods, and security preferences to your liking.</p>
+          </div>
         </div>
-       </div>
       </div>
     </section>
 
@@ -86,11 +86,11 @@
       <div class="container">
         <h3>Changelog</h3>
         <ul>
-          <li><strong>[v1.3.3]</strong> Added whitelist API integration and enhanced anti-crash protection.</li>
-          <li><strong>[v1.3.2]</strong> Improved script injection speed and reduced memory usage.</li>
-          <li><strong>[v1.3.1]</strong> Added new UI customization panel and theme switching.</li>
-          <li><strong>[v1.3.0]</strong> Patched detection vectors to improve bypass methods.</li>
-          <li><strong>[v1.2.9]</strong> Upgraded auto-update system for future-proofing.</li>
+          <li><i data-lucide="check-circle" style="margin-right: 6px;"></i><strong>[v1.3.3]</strong> Added whitelist API integration and enhanced anti-crash protection.</li>
+          <li><i data-lucide="check-circle" style="margin-right: 6px;"></i><strong>[v1.3.2]</strong> Improved script injection speed and reduced memory usage.</li>
+          <li><i data-lucide="check-circle" style="margin-right: 6px;"></i><strong>[v1.3.1]</strong> Added new UI customization panel and theme switching.</li>
+          <li><i data-lucide="check-circle" style="margin-right: 6px;"></i><strong>[v1.3.0]</strong> Patched detection vectors to improve bypass methods.</li>
+          <li><i data-lucide="check-circle" style="margin-right: 6px;"></i><strong>[v1.2.9]</strong> Upgraded auto-update system for future-proofing.</li>
         </ul>
       </div>
     </section>
@@ -98,21 +98,20 @@
 
   <footer class="glass">
     <div class="container">
-      <p>© 2025 GHP X. All rights reserved. | <a href="https://github.com/ghp-x">GitHub</a></p>
+      <p>© 2025 GHP X. All rights reserved. |
+        <a href="https://github.com/ghp-x" target="_blank">
+          <i data-lucide="github"></i>
+        </a>
+      </p>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script type="module">
-    import { createIcons, shield, rocket, code2, download, zap, lock, activity } from 'https://cdn.skypack.dev/lucide';
-    createIcons({
-      icons: { Shield, Rocket, Code2, Download, Zap, Lock, Activity }
-    });
-    });
-  </script>
   <script>
     AOS.init({ duration: 1000, once: true });
+    lucide.createIcons();
+    
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
