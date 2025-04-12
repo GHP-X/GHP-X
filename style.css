@@ -61,8 +61,17 @@ nav ul li a:hover {
 .hero {
   text-align: center;
   padding: 2rem;
+  opacity: 1;
+  visibility: visible;
   animation: fadeIn 1.5s ease-in-out;
 }
+
+.main {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
 
 /* Call-to-Action Button */
 .cta-button {
