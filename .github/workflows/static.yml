@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHP X | The Best Scripting Utility</title>
+  <!-- Optional: Verlinke ein externes Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Einfaches CSS für ein responsives Layout */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header, footer {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section {
+      padding: 1rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GHP X | The Best Scripting Utility</h1>
+    <nav>
+      <ul>
+        <li><a href="#what-is-ghp-x">Über GHP X</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contribution">Beitrag</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Bereich: Was ist GHP X Executor? -->
+    <section id="what-is-ghp-x">
+      <h2>Was ist GHP X Executor?</h2>
+      <p>GHP X Executor ist ein spezialisiertes Tool zur Ausführung benutzerdefinierter Skripte innerhalb von Roblox. Es bietet eine leistungsstarke Umgebung für Spieler, die:</p>
+      <ul>
+        <li>In-Game-Aufgaben automatisieren</li>
+        <li>Mit einzigartigen Skripten experimentieren</li>
+        <li>Versteckte Spielfunktionen freischalten</li>
+        <li>Zusätzliche Vorteile in beliebten Spielmodi nutzen</li>
+      </ul>
+      <p><em>Nutze GHP X verantwortungsbewusst und gemäß den Nutzungsbedingungen von Roblox.</em></p>
+    </section>
+
+    <!-- Bereich: Key Features -->
+    <section id="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Ultra-Fast Execution Engine:</strong> Unterstützt mehrere Skriptsprachen und verarbeitet komplexe Skripte nahezu ohne Verzögerung.</li>
+        <li><strong>User-Friendly Interface:</strong> Intuitiv und sowohl für Anfänger als auch für erfahrene Scripter leicht zu bedienen.</li>
+        <li><strong>Regelmäßige Updates:</strong> Kontinuierliche Verbesserungen gewährleisten Kompatibilität mit den neuesten Roblox-Patches.</li>
+        <li><strong>Community Support:</strong> Eine wachsende Nutzerbasis teilt ständig neue Skripte und nützliche Tipps.</li>
+        <li><strong>Mehrere Download-Optionen:</strong> Bietet alternative Download-Methoden, um unterschiedlichen Nutzerbedürfnissen gerecht zu werden.</li>
+      </ul>
+    </section>
+
+    <!-- Bereich: Installation and Usage -->
+    <section id="installation">
+      <h2>Installation und Nutzung</h2>
+      <ol>
+        <li><strong>Download:</strong> Lade die neueste Version von GHP X Executor herunter.</li>
+        <li><strong>Antivirus vorübergehend deaktivieren:</strong> Einige Antivirusprogramme können das Tool fälschlicherweise als Bedrohung erkennen.</li>
+        <li><strong>Installation:</strong> Folge den Anweisungen in der Dokumentation für eine nahtlose Einrichtung.</li>
+        <li><strong>Programm starten:</strong> Öffne GHP X Executor, um das Interface anzuzeigen, über das du Skripte einfügen kannst.</li>
+        <li><strong>Skript ausführen:</strong> Nach dem Login in dein Roblox-Konto lade ein vertrauenswürdiges Skript und klicke auf „Execute“.</li>
+      </ol>
+    </section>
+
+    <!-- Bereich: Safety and Precautions / FAQ -->
+    <section id="faq">
+      <h2>Häufig gestellte Fragen (FAQ)</h2>
+      <h3>Ist GHP X Executor sicher?</h3>
+      <p>Ja, GHP X Executor ist sicher, wenn du es aus offiziellen Quellen beziehst und verantwortungsbewusst einsetzt.</p>
+      <h3>Wird mein Antivirus GHP X Executor blockieren?</h3>
+      <p>Aufgrund der Funktionalität könnte dein Antivirus das Tool als potenziell bedrohlich einstufen – dies sind in der Regel Fehlalarme. Es wird empfohlen, stets die offiziellen Richtlinien und Updates zu prüfen.</p>
+      <h3>Wo finde ich Unterstützung?</h3>
+      <p>Besuche unseren Discord-Kanal oder die Community-Foren, um Hilfe und weitere Informationen zu erhalten.</p>
+    </section>
+
+    <!-- Bereich: Community and Resources -->
+    <section id="community">
+      <h2>Community und Ressourcen</h2>
+      <ul>
+        <li><strong>Discord Community:</strong> Trete unserem Discord-Server bei, um in Echtzeit Unterstützung und Skriptideen auszutauschen.</li>
+        <li><strong>Reddit & Foren:</strong> Vernetze dich mit anderen Nutzern, um Erfahrungen zu teilen und gemeinsam Probleme zu lösen.</li>
+        <li><strong>GitHub Repository:</strong> Entdecke den Quellcode, melde Fehler oder trage zu Verbesserungen bei.</li>
+      </ul>
+    </section>
+
+    <!-- Bereich: Contribution -->
+    <section id="contribution">
+      <h2>Beitrag</h2>
+      <ol>
+        <li><strong>Repository forken:</strong> Erstelle eine eigene Branch aus unserem Quellcode.</li>
+        <li><strong>Änderungen vornehmen:</strong> Implementiere Verbesserungen, Fehlerbehebungen oder neue Features.</li>
+        <li><strong>Pull Request einreichen:</strong> Reiche deine Beiträge ein, damit sie von der Community geprüft und integriert werden können.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 GHP X Team. Alle Rechte vorbehalten.</p>
+  </footer>
+</body>
+</html>
