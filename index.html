@@ -13,6 +13,7 @@
 
   <header class="glass">
     <h1>Welcome to <span class="highlight">GHP X</span></h1>
+    <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -66,5 +67,39 @@
       });
     });
   </script>
+  <script>
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+  const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
+  let textArrayIndex = 0;
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 80);
+    } else {
+      setTimeout(erase, 2000);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, 40);
+    } else {
+      textArrayIndex++;
+      if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+      setTimeout(type, 500);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(type, 1000);
+  });
+</script>
+
 </body>
 </html>
