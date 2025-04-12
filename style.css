@@ -2,117 +2,135 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  padding: 0;
+  background: #f0f4f8;
+  color: #333;
   overflow-x: hidden;
 }
 
-/* Reset margin and padding for all elements */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
-/* Header Styles */
+/* Header Section */
 header {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-bottom: 2px solid #00d2ff;
-  position: sticky;
+  background-color: #222;
+  padding: 1.5rem 0;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-header h1 span.highlight {
-  color: #00d2ff;
+header h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-nav ul li {
-  margin: 0 15px;
+header nav ul li {
+  margin: 0;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
+header nav ul li a {
+  color: #fff;
   font-weight: 600;
+  text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
   color: #00d2ff;
   transform: scale(1.1);
 }
 
 /* Hero Section */
 .hero {
+  background: linear-gradient(135deg, #00d2ff, #00aaff);
+  padding: 10rem 0;
   text-align: center;
-  padding: 6rem 2rem;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  margin-top: 2rem;
-  animation: fadeIn 2s ease-in-out;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .cta-button {
   background-color: #00d2ff;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 50px;
   color: white;
-  font-weight: bold;
-  text-decoration: none;
   font-size: 1.2rem;
-  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
   transition: all 0.3s ease;
 }
 
 .cta-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 30px rgba(0, 210, 255, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.5);
 }
 
 /* Features Section */
 .features {
+  background: #fff;
+  padding: 4rem 0;
   text-align: center;
-  margin: 3rem 0;
+}
+
+.features h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222;
 }
 
 .feature-list {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
 .feature {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: #f7f7f7;
   padding: 2rem;
   border-radius: 15px;
+  flex: 1 1 30%;
   text-align: center;
-  flex: 1 1 250px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  animation: fadeIn 1s ease-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .feature:hover {
   transform: translateY(-10px);
-  background-color: rgba(0, 210, 255, 0.2);
+  background-color: #00d2ff;
+  color: #fff;
 }
 
 .feature i {
-  font-size: 2.5rem;
-  color: #00d2ff;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -121,23 +139,30 @@ nav ul li a:hover {
   margin-bottom: 1rem;
 }
 
+.feature p {
+  font-size: 1.1rem;
+}
+
 /* Changelog Section */
 .changelog {
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  margin-top: 3rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background: #f7f7f7;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.changelog h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .changelog ul {
   list-style: none;
-  padding-left: 1.5rem;
+  padding: 0;
 }
 
 .changelog li {
-  font-size: 1.1rem;
-  color: #fff;
+  font-size: 1.2rem;
+  color: #333;
   margin-bottom: 1rem;
 }
 
@@ -145,63 +170,39 @@ nav ul li a:hover {
   color: #00d2ff;
 }
 
-/* Footer Styles */
+/* Footer Section */
 footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-top: 2px solid #00d2ff;
+  background-color: #222;
   color: #fff;
+  padding: 2rem 0;
+  text-align: center;
 }
 
 footer a {
-  text-decoration: none;
   color: #00d2ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Glow Effect for Buttons */
-.glow-button {
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  background: #00d2ff;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.glow-button:hover {
-  box-shadow: 0 0 20px #00d2ff, 0 0 30px #00d2ff;
-  transform: scale(1.1);
+footer a:hover {
+  color: #fff;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .feature-list {
     flex-direction: column;
     align-items: center;
   }
 
-  .feature {
-    margin-bottom: 2rem;
-    width: 80%;
-  }
-
   .cta-button {
-    padding: 1rem 3rem;
+    width: 100%;
+    padding: 1rem 2rem;
   }
 }
