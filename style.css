@@ -7,6 +7,20 @@ body {
   cursor: none; /* Keeps default cursor hidden */
 }
 
+.cursor-glow {
+  width: 20px;
+  height: 20px;
+  background: cyan;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s;
+  z-index: 9999;
+  pointer-events: none; /* Prevents the cursor from interacting with any elements */
+}
+
 .background {
   background: url('https://media.giphy.com/media/crwwGNqIMccLXpD10F/giphy.gif') repeat fixed center center;
   background-size: cover;
@@ -18,17 +32,9 @@ body {
   animation: bgScroll 60s linear infinite;
 }
 
-
-
 @keyframes bgScroll {
   0% { background-position: 0 0; }
   100% { background-position: 100% 100%; }
-}
-
-
-@keyframes bgZoom {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.05); }
 }
 
 header, footer {
