@@ -4,7 +4,6 @@ body {
   background: #0c0c0c;
   color: white;
   overflow-x: hidden;
-  cursor: default;
 }
 
 .background {
@@ -15,17 +14,12 @@ body {
   inset: 0;
   opacity: 0.2;
   filter: blur(3px) brightness(0.9);
-  animation: bgScroll 60s linear infinite;
-}
-
-@keyframes bgScroll {
-  0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
 }
 
 header, footer {
   padding: 1.5rem;
   text-align: center;
+  animation: fadeSlideDown 1s ease forwards;
 }
 
 header nav ul {
@@ -65,7 +59,6 @@ nav a:hover {
   border-radius: 10px;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px cyan;
-  display: inline-block;
 }
 .cta-button:hover {
   background: white;
@@ -117,11 +110,34 @@ footer {
   box-shadow: 0 0 20px rgba(0,255,255,0.1);
 }
 
+/* Animations */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .highlight {
   color: cyan;
   text-shadow: 0 0 10px cyan;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .feature-list {
     flex-direction: column;
