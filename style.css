@@ -1,252 +1,147 @@
-/* General Styles */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #2c2c2c;
-  color: #fff;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  position: relative;
-  height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: url('https://media.giphy.com/media/crwwGNqIMccLXpD10F/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+    transition: background 1s ease-in-out;
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://media.giphy.com/media/crwwGNqIMccLXpD10F/giphy.gif') no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.3;
-  z-index: -1;
+/* Heading Styles */
+h1, h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 0 40px rgba(0, 210, 255, 0.6);
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
 }
 
-/* Glassmorphism Effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 1.5rem;
-  border-radius: 20px;
-  margin: 1rem auto;
-  max-width: 1000px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px rgba(0, 210, 255, 0.7);
 }
 
-/* Button Glow Effect */
-.cta-button {
-  background-color: #00d2ff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 5px rgba(0, 210, 255, 0.8);
+/* Paragraphs */
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
 }
 
-.cta-button:hover {
-  transform: scale(1.1);
-  background-color: #008fb2;
-  box-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 0 30px rgba(0, 210, 255, 0.6), 0 0 40px rgba(0, 210, 255, 0.4);
+/* Button Styles */
+.button {
+    background: none;
+    color: #00d2ff;
+    padding: 0.75rem 2rem;
+    border: 2px solid #00d2ff;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(0, 210, 255, 0.8);
+    cursor: pointer;
+    display: inline-block;
 }
 
-/* General Button Style */
-.cta-button:focus {
-  outline: none;
+.button:hover {
+    transform: scale(1.1);
+    color: #008fb2;
+    text-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 0 30px rgba(0, 210, 255, 0.6), 0 0 40px rgba(0, 210, 255, 0.4);
+    border-color: #008fb2;
 }
 
-/* Text Button Style */
-.text-button {
-  background: none;
-  color: #00d2ff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-  text-shadow: 0 0 5px rgba(0, 210, 255, 0.8);
+/* Button Text Animation */
+.button:focus, .button:active {
+    animation: pulse 1s infinite;
 }
 
-.text-button:hover {
-  transform: scale(1.1);
-  color: #008fb2;
-  text-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 0 30px rgba(0, 210, 255, 0.6), 0 0 40px rgba(0, 210, 255, 0.4);
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-/* Focus State */
-.text-button:focus {
-  outline: none;
+/* Navigation Bar */
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    display: flex;
+    gap: 20px;
 }
 
-
-/* Header */
-header h1 span.highlight {
-  color: #00d2ff;
+nav a {
+    color: #00d2ff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
+nav a:hover {
+    color: #008fb2;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 1), 0 0 20px rgba(0, 210, 255, 0.6);
 }
 
-nav ul li {
-  margin: 0 15px;
+/* Section Styles */
+section {
+    margin: 40px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  position: relative;
-  transition: color 0.3s ease, padding 0.3s ease;
+.description {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
 }
 
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #00d2ff;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+.button-container {
+    margin-top: 30px;
 }
 
-nav ul li a:hover {
-  color: #00d2ff;
-  padding-bottom: 5px;
-}
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
 
-nav ul li a:hover::after {
-  transform: scaleX(1);
-}
+    h2 {
+        font-size: 1.4rem;
+    }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 2rem;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-.cta-button {
-  background-color: #00d2ff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  transform: scale(1.1);
-  background-color: #008fb2;
-}
-
-/* Features Section */
-.feature-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.feature {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 15px;
-  text-align: center;
-  flex: 1 1 250px;
-  transition: all 0.4s ease;
-}
-
-.feature:hover {
-  transform: translateY(-10px);
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Changelog Section */
-.changelog ul {
-  padding-left: 1.5rem;
-}
-
-.changelog li {
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
-  padding: 10px 0;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.changelog li:hover {
-  background-color: rgba(0, 210, 255, 0.1);
-  transform: translateX(5px);
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* Hover Effects (Hover.css) */
-.hvr-grow-shadow:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.hvr-grow-shadow {
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-/* Animation Keyframes */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Footer Link Hover Effect */
-footer a {
-  color: #00d2ff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #008fb2;
-  text-decoration: underline;
-}
-
-/* Changelog Hover Effect */
-.changelog li:hover {
-  background-color: rgba(0, 210, 255, 0.1);
-  transform: translateX(5px);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Logo Hover Animation */
-.logo {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.logo:hover {
-  transform: rotate(360deg);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    .button {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
 }
