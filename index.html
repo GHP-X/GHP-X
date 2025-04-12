@@ -1,113 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GHP X - Roblox Executor</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GHP X: An immersive platform with interactive features. Explore the project, download it, and get to know more about its functionalities.">
+    <title>GHP X - Project Overview</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background: url('path_to_your_background.gif') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        /* Heading Styles */
+        h1, h2 {
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* Paragraphs */
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button Styles */
+        .button {
+            background: none;
+            color: #00d2ff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+            text-decoration: none;
+            text-shadow: 0 0 5px rgba(0, 210, 255, 0.8);
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            color: #008fb2;
+            text-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 0 30px rgba(0, 210, 255, 0.6), 0 0 40px rgba(0, 210, 255, 0.4);
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #00d2ff;
+            margin-right: 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #008fb2;
+        }
+
+        /* Section Styles */
+        section {
+            margin: 40px;
+        }
+
+        .description {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="background"></div>
 
-  <header class="glass">
-    <h1>Welcome to <span class="highlight">GHP X</span></h1>
-    <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
+    <!-- Navigation Bar -->
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#download">Download</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
 
-  <main>
-    <section class="hero fade-in">
-      <h2>The safest and most powerful Roblox scripting utility</h2>
-      <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
-      <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Download Now</a>
+    <!-- Main Content -->
+    <section id="home">
+        <h1>Welcome to GHP X</h1>
+        <h2>An Immersive Project Experience</h2>
+        <p class="description">
+            GHP X is a revolutionary platform that merges cutting-edge technology with an engaging user experience. The project incorporates advanced features including AI-powered interactions, customizable interfaces, and a seamless integration across multiple devices. It’s designed to empower users and enhance the way they interact with technology. Dive into a new era of digital interaction and explore the possibilities that GHP X has to offer!
+        </p>
+        
+        <div class="button-container">
+            <a href="#download" class="button">Download Now</a>
+        </div>
     </section>
 
-    <section class="features fade-in">
-      <h3>Why GHP X?</h3>
-      <div class="feature-list">
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-shield-alt"></i>
-          <h4>Safe & Secure</h4>
-          <p>Clean codebase, thoroughly tested for stability and safety.</p>
-        </div>
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-rocket"></i>
-          <h4>Blazing Fast</h4>
-          <p>Instant execution, optimized threading, no crashes.</p>
-        </div>
-        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="500">
-          <i class="fas fa-code"></i>
-          <h4>Full Script Support</h4>
-          <p>Runs nearly every Lua/U scripts used in the Roblox community.</p>
-        </div>
-      </div>
+    <section id="about">
+        <h2>About the Project</h2>
+        <p class="description">
+            GHP X is built with the user at its core. We focus on delivering a streamlined, responsive platform that’s easy to use while also offering advanced features for those who demand more. Whether you’re a developer, a gamer, or simply someone looking for the next big thing in tech, GHP X is here to elevate your experience.
+        </p>
     </section>
 
-    <section class="changelog glass" data-aos="fade-up">
-      <h3>Changelog</h3>
-      <ul>
-        <li><strong>[v1.3.3]</strong> Added whitelist API integration and enhanced anti-crash protection.</li>
-        <li><strong>[v1.3.2]</strong> Improved script injection speed and reduced memory usage.</li>
-        <li><strong>[v1.3.1]</strong> Added new UI customization panel and theme switching.</li>
-        <li><strong>[v1.3.0]</strong> Patched detection vectors to improve bypass methods.</li>
-        <li><strong>[v1.2.9]</strong> Upgraded auto-update system for future-proofing.</li>
-      </ul>
+    <section id="download">
+        <h2>How to Get Started</h2>
+        <p class="description">
+            Download the GHP X platform and begin your journey today. With our user-friendly interface, you'll be up and running in no time. Follow the steps below to start enjoying everything GHP X has to offer:
+        </p>
+        <ol class="description">
+            <li>Click on the "Download Now" button</li>
+            <li>Install the application on your preferred device</li>
+            <li>Launch the app and dive into an immersive experience</li>
+        </ol>
     </section>
-  </main>
 
-  <footer class="glass">
-    <p>© 2025 GHP X. All rights reserved. | <a href="https://github.com/ghp-x">GitHub</a></p>
-  </footer>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p class="description">
+            For any inquiries or support, feel free to reach out to us. We’re always here to help you get the most out of GHP X. Our team is dedicated to providing you with the best experience possible.
+        </p>
+        <div class="button-container">
+            <a href="mailto:support@ghpx.com" class="button">Contact Support</a>
+        </div>
+    </section>
 
-  <!-- Scripts -->
-  <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
-  <script>
-    const typedTextSpan = document.querySelector(".typed-text");
-    const cursorSpan = document.querySelector(".cursor");
-    const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
-    let textArrayIndex = 0;
-    let charIndex = 0;
-
-    function type() {
-      if (charIndex < textArray[textArrayIndex].length) {
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 80);
-      } else {
-        setTimeout(erase, 2000);
-      }
-    }
-
-    function erase() {
-      if (charIndex > 0) {
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, 40);
-      } else {
-        textArrayIndex++;
-        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-        setTimeout(type, 500);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(type, 1000);
-    });
-  </script>
 </body>
 </html>
