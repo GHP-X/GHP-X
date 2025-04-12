@@ -4,42 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GHP X - Roblox Executor</title>
-
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="background"></div>
 
-  <header class="glass animate__animated animate__fadeInDown">
+  <header class="glass">
     <h1>Welcome to <span class="highlight">GHP X</span></h1>
     <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
     <nav>
       <ul>
-        <li><a class="hvr-underline-from-center" href="index.html">Home</a></li>
-        <li><a class="hvr-underline-from-center" href="about.html">About us</a></li>
-        <li><a class="hvr-underline-from-center" href="download.html">Download</a></li>
-        <li><a class="hvr-underline-from-center" href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero" data-aos="zoom-in">
+    <section class="hero fade-in">
       <h2>The safest and most powerful Roblox scripting utility</h2>
       <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
-      <a href="download.html" class="cta-button hvr-grow"><i class="fas fa-download"></i> Download Now</a>
+      <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Download Now</a>
     </section>
 
-    <section class="features" data-aos="fade-up">
+    <section class="features fade-in">
       <h3>Why GHP X?</h3>
       <div class="feature-list">
         <div class="feature" data-aos="fade-up" data-aos-delay="100">
@@ -47,12 +40,12 @@
           <h4>Safe & Secure</h4>
           <p>Clean code, no malware, full trust.</p>
         </div>
-        <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature" data-aos="fade-up" data-aos-delay="300">
           <i class="fas fa-rocket"></i>
           <h4>Blazing Fast</h4>
           <p>Optimized execution with minimal delay.</p>
         </div>
-        <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature" data-aos="fade-up" data-aos-delay="500">
           <i class="fas fa-code"></i>
           <h4>Full Script Support</h4>
           <p>Supports nearly all popular script formats.</p>
@@ -61,19 +54,17 @@
     </section>
   </main>
 
-  <footer class="glass animate__animated animate__fadeInUp">
+  <footer class="glass">
     <p>© 2025 GHP X. All rights reserved. | <a href="https://github.com/ghp-x">GitHub</a></p>
   </footer>
 
   <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
   <script>
     AOS.init();
-
-    // Typing Effect
+  </script>
+  <script>
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
@@ -96,12 +87,15 @@
         charIndex--;
         setTimeout(erase, 40);
       } else {
-        textArrayIndex = (textArrayIndex + 1) % textArray.length;
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
         setTimeout(type, 500);
       }
     }
 
-    document.addEventListener("DOMContentLoaded", () => setTimeout(type, 1000));
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(type, 1000);
+    });
   </script>
 </body>
 </html>
