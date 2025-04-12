@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
 </head>
-  <script>
+
+<script>
   const cursor = document.querySelector('.cursor-glow');
   document.addEventListener('mousemove', e => {
     cursor.style.top = `${e.clientY}px`;
@@ -17,10 +18,10 @@
 </script>
 
 <body>
+  <!-- Custom Cursor -->
+  <div class="cursor-glow"></div>
+  <!-- Background -->
   <div class="background"></div>
-  <div class="background" style="background: url('https://media.giphy.com/media/crwwGNqIMccLXpD10F/giphy.gif') repeat fixed center center; background-size: cover;">
- </div>
-
 
   <header class="glass">
     <h1>Welcome to <span class="highlight">GHP X</span></h1>
@@ -78,39 +79,40 @@
       });
     });
   </script>
+
   <script>
-  const typedTextSpan = document.querySelector(".typed-text");
-  const cursorSpan = document.querySelector(".cursor");
-  const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
-  let textArrayIndex = 0;
-  let charIndex = 0;
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+    const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
+    let textArrayIndex = 0;
+    let charIndex = 0;
 
-  function type() {
-    if (charIndex < textArray[textArrayIndex].length) {
-      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(type, 80);
-    } else {
-      setTimeout(erase, 2000);
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 80);
+      } else {
+        setTimeout(erase, 2000);
+      }
     }
-  }
 
-  function erase() {
-    if (charIndex > 0) {
-      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(erase, 40);
-    } else {
-      textArrayIndex++;
-      if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-      setTimeout(type, 500);
+    function erase() {
+      if (charIndex > 0) {
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 40);
+      } else {
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, 500);
+      }
     }
-  }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(type, 1000);
-  });
-</script>
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(type, 1000);
+    });
+  </script>
 
 </body>
 </html>
