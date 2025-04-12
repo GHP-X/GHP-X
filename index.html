@@ -11,6 +11,8 @@
 </head>
 
 <body>
+  <div class="background"></div>
+
   <header class="glass">
     <h1>Welcome to <span class="highlight">GHP X</span></h1>
     <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
@@ -73,7 +75,8 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
-
+  </script>
+  <script>
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
