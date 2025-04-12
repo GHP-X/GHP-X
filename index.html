@@ -1,290 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GHP X - Roblox Executor</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* Global styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1, h2, h3 {
-      font-weight: 700;
-      color: #fff;
-    }
-
-    /* Header styles */
-    header {
-      text-align: center;
-      padding: 4rem 2rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-bottom: 2px solid #00d2ff;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 span.highlight {
-      color: #00d2ff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #00d2ff;
-      transform: scale(1.1);
-    }
-
-    /* Hero section */
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      margin-top: 2rem;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .cta-button {
-      background-color: #00d2ff;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 30px rgba(0, 210, 255, 0.5);
-    }
-
-    /* Features section */
-    .features {
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .feature-list {
-      display: flex;
-      justify-content: space-evenly;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .feature {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 2rem;
-      border-radius: 15px;
-      text-align: center;
-      flex: 1 1 250px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      animation: fadeIn 1s ease-out;
-    }
-
-    .feature:hover {
-      transform: translateY(-10px);
-      background-color: rgba(0, 210, 255, 0.2);
-    }
-
-    .feature i {
-      font-size: 2.5rem;
-      color: #00d2ff;
-      margin-bottom: 1rem;
-    }
-
-    .feature h4 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Changelog section */
-    .changelog {
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 15px;
-      margin-top: 3rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .changelog ul {
-      list-style: none;
-      padding-left: 1.5rem;
-    }
-
-    .changelog li {
-      font-size: 1.1rem;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-
-    .changelog li strong {
-      color: #00d2ff;
-    }
-
-    /* Footer styles */
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-top: 2px solid #00d2ff;
-      color: #fff;
-    }
-
-    footer a {
-      text-decoration: none;
-      color: #00d2ff;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Glow effect */
-    .glow-button {
-      font-size: 1.2rem;
-      padding: 1rem 2rem;
-      background: #00d2ff;
-      border: none;
-      border-radius: 30px;
-      color: white;
-      text-transform: uppercase;
-      box-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .glow-button:hover {
-      box-shadow: 0 0 20px #00d2ff, 0 0 30px #00d2ff;
-      transform: scale(1.1);
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .feature-list {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .feature {
-        margin-bottom: 2rem;
-        width: 80%;
-      }
-
-      .cta-button {
-        padding: 1rem 3rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Welcome to <span class="highlight">GHP X</span></h1>
+    <h1><span class="highlight">GHP X</span> - Download Now</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="download.html">Download</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+        <li><a href="#footer">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>The safest and most powerful Roblox scripting utility</h2>
-      <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
-      <a href="download.html" class="cta-button">Download Now</a>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h2>Welcome to GHP X</h2>
+    <p>Your ultimate solution for efficient downloads and much more.</p>
+    <a href="#" class="cta-button glow-button">Download Now</a>
+  </section>
 
-    <section class="features">
-      <h3>Why GHP X?</h3>
-      <div class="feature-list">
-        <div class="feature">
-          <i class="fas fa-shield-alt"></i>
-          <h4>Safe & Secure</h4>
-          <p>Clean codebase, thoroughly tested for stability and safety.</p>
-        </div>
-        <div class="feature">
-          <i class="fas fa-rocket"></i>
-          <h4>Blazing Fast</h4>
-          <p>Instant execution, optimized threading, no crashes.</p>
-        </div>
-        <div class="feature">
-          <i class="fas fa-code"></i>
-          <h4>Full Script Support</h4>
-          <p>Runs nearly every Lua/U scripts used in the Roblox community.</p>
-        </div>
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h3>Features</h3>
+    <div class="feature-list">
+      <div class="feature">
+        <i class="fas fa-cogs"></i>
+        <h4>Advanced Settings</h4>
+        <p>Customize your download experience.</p>
       </div>
-    </section>
+      <div class="feature">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Security</h4>
+        <p>Your data is always secure with us.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-sync"></i>
+        <h4>Auto Updates</h4>
+        <p>Keep your app up to date automatically.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="changelog">
-      <h3>Changelog</h3>
-      <ul>
-        <li><strong>[v1.3.3]</strong> Added whitelist API integration and enhanced anti-crash protection.</li>
-        <li><strong>[v1.3.2]</strong> Improved script injection speed and reduced memory usage.</li>
-        <li><strong>[v1.3.1]</strong> Added new UI customization panel and theme switching.</li>
-        <li><strong>[v1.3.0]</strong> Patched detection vectors to improve bypass methods.</li>
-        <li><strong>[v1.2.9]</strong> Upgraded auto-update system for future-proofing.</li>
-      </ul>
-    </section>
-  </main>
+  <!-- Changelog Section -->
+  <section class="changelog" id="changelog">
+    <h3>Changelog</h3>
+    <ul>
+      <li><strong>Version 1.2:</strong> Fixed bug in download speed.</li>
+      <li><strong>Version 1.1:</strong> Added new features for better efficiency.</li>
+      <li><strong>Version 1.0:</strong> Initial release.</li>
+    </ul>
+  </section>
 
-  <footer>
-    <p>© 2025 GHP X. All rights reserved. | <a href="https://github.com/ghp-x">GitHub</a></p>
+  <!-- Footer Section -->
+  <footer id="footer">
+    <p>&copy; 2025 GHP X - All Rights Reserved</p>
+    <a href="mailto:contact@ghpx.com">Contact Us</a>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
 </body>
 </html>
