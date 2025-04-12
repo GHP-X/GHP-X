@@ -8,6 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
 </head>
+  <script>
+  const cursor = document.querySelector('.cursor-glow');
+  document.addEventListener('mousemove', e => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  });
+</script>
+
 <body>
   <div class="cursor-glow"></div>
   <div class="background"></div>
