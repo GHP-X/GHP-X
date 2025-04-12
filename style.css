@@ -4,7 +4,7 @@ body {
   background: #0c0c0c;
   color: white;
   overflow-x: hidden;
-  cursor:none;
+  cursor: none; /* Keeps default cursor hidden */
 }
 
 .cursor-glow {
@@ -18,6 +18,7 @@ body {
   transform: translate(-50%, -50%);
   transition: transform 0.05s;
   z-index: 9999;
+  pointer-events: none; /* Prevents the cursor from interacting with any elements */
 }
 
 .background {
@@ -30,6 +31,7 @@ body {
   filter: blur(3px) brightness(0.9);
   animation: bgScroll 60s linear infinite;
 }
+
 
 
 @keyframes bgScroll {
