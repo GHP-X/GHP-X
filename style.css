@@ -21,7 +21,7 @@ body {
 }
 
 .background {
-  background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzR4NzZ1anFwNDgxYnFwbDA4Yzd5eGRwdGw5dmJ3ZGtjcXFsamtsbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/crwwGNqIMccLXpD10F/giphy.gif') repeat fixed center center;
+  background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWN5Mjlod2hqZXd6eTZiMnZub250dzE4d3d2bnp2MTZ1NnVuNGhscyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8PEbUBEwxktyNeqVZ4/giphy.gif') repeat fixed center center;
   background-size: cover;
   position: fixed;
   z-index: -1;
