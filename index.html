@@ -8,98 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      overflow-x: hidden;
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      padding: 1.5rem;
-      border-radius: 20px;
-      margin: 1rem auto;
-      max-width: 1000px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.3);
-    }
-    header h1 span.highlight {
-      color: #00d2ff;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #00d2ff;
-    }
-    .hero {
-      text-align: center;
-      padding: 2rem;
-    }
-    .cta-button {
-      background-color: #00d2ff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 25px;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-    }
-    .cta-button:hover {
-      transform: scale(1.1);
-    }
-    .feature-list {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .feature {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: 15px;
-      text-align: center;
-      flex: 1 1 250px;
-      transition: all 0.4s ease;
-    }
-    .feature:hover {
-      transform: translateY(-10px);
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    .changelog ul {
-      padding-left: 1.5rem;
-    }
-    .changelog li {
-      margin-bottom: 0.75rem;
-      line-height: 1.5;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="background"></div>
-
   <header class="glass">
     <h1>Welcome to <span class="highlight">GHP X</span></h1>
     <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
@@ -162,8 +73,7 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
-  </script>
-  <script>
+
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
