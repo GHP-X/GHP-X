@@ -4,6 +4,20 @@ body {
   background: #0c0c0c;
   color: white;
   overflow-x: hidden;
+  cursor:none;
+}
+
+.cursor-glow {
+  width: 20px;
+  height: 20px;
+  background: cyan;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s;
+  z-index: 9999;
 }
 
 .background {
