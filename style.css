@@ -1,51 +1,109 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: #0c0c0c;
   color: white;
-  background: black;
+  overflow-x: hidden;
 }
 
 .background {
   background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   z-index: -1;
-  opacity: 0.25;
+  opacity: 0.2;
+  filter: blur(2px);
 }
 
-header {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
+header, footer {
+  padding: 1.5rem;
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+header nav ul {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  list-style: none;
+  padding: 0;
 }
 
 nav a {
   color: cyan;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: white;
 }
 
 .hero {
   text-align: center;
-  margin-top: 10vh;
+  margin: 10vh auto;
+  max-width: 800px;
 }
 
 .cta-button {
-  display: inline-block;
+  background: cyan;
+  color: black;
   padding: 1rem 2rem;
   margin-top: 2rem;
-  background-color: cyan;
-  color: black;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  background: white;
+  color: black;
+}
+
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.feature {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 250px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+.feature i {
+  font-size: 2rem;
+  color: cyan;
+  margin-bottom: 1rem;
+}
+
+.glass {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlight {
+  color: cyan;
 }
