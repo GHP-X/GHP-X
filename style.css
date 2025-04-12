@@ -7,15 +7,20 @@ body {
 }
 
 .background {
-  background: url('https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif') no-repeat center center fixed;
+  background: url('https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif') repeat fixed center center;
   background-size: cover;
   position: fixed;
-  inset: 0;
   z-index: -1;
+  inset: 0;
   opacity: 0.2;
-  filter: blur(3px) brightness(0.8);
-  animation: bgZoom 30s ease-in-out infinite alternate;
+  filter: blur(3px) brightness(0.9);
+  animation: bgScroll 60s linear infinite;
 }
+@keyframes bgScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
 
 @keyframes bgZoom {
   0% { transform: scale(1); }
