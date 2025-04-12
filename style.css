@@ -28,7 +28,7 @@ body {
   z-index: -1;
 }
 .features {
-  margin-top: -20rem;
+  margin-top: -200rem;
 }
 /* Glassmorphism Cards */
 .glass {
@@ -69,12 +69,12 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 4rem;
 }
 .hero p {
   margin-top: 1rem;
