@@ -1,63 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GHP X: An immersive platform with interactive features. Explore the project, download it, and get to know more about its functionalities.">
-    <title>GHP X - Project Overview</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GHP X - Roblox Executor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
 </head>
+
 <body>
-
-    <!-- Navigation Bar -->
+  <header class="glass">
+    <h1>Welcome to <span class="highlight">GHP X</span></h1>
+    <h2><span class="typed-text"></span><span class="cursor">|</span></h2>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#download">Download</a>
-        <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Main Content -->
-    <section id="home">
-        <h1>Welcome to GHP X</h1>
-        <h2>An Immersive Project Experience</h2>
-        <p class="description">
-            GHP X is a revolutionary platform that merges cutting-edge technology with an engaging user experience. The project incorporates advanced features including AI-powered interactions, customizable interfaces, and seamless integration across multiple devices. It’s designed to empower users and enhance the way they interact with technology. Dive into a new era of digital interaction and explore the possibilities that GHP X has to offer!
-        </p>
-        
-        <div class="button-container">
-            <a href="#download" class="button">Download Now</a>
+  <main>
+    <section class="hero fade-in">
+      <h2>The safest and most powerful Roblox scripting utility</h2>
+      <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
+      <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Download Now</a>
+    </section>
+
+    <section class="features fade-in">
+      <h3>Why GHP X?</h3>
+      <div class="feature-list">
+        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Safe & Secure</h4>
+          <p>Clean codebase, thoroughly tested for stability and safety.</p>
         </div>
-    </section>
-
-    <section id="about">
-        <h2>About the Project</h2>
-        <p class="description">
-            GHP X is built with the user at its core. We focus on delivering a streamlined, responsive platform that’s easy to use while also offering advanced features for those who demand more. Whether you’re a developer, a gamer, or simply someone looking for the next big thing in tech, GHP X is here to elevate your experience.
-        </p>
-    </section>
-
-    <section id="download">
-        <h2>How to Get Started</h2>
-        <p class="description">
-            Download the GHP X platform and begin your journey today. With our user-friendly interface, you'll be up and running in no time. Follow the steps below to start enjoying everything GHP X has to offer:
-        </p>
-        <ol class="description">
-            <li>Click on the "Download Now" button</li>
-            <li>Install the application on your preferred device</li>
-            <li>Launch the app and dive into an immersive experience</li>
-        </ol>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p class="description">
-            For any inquiries or support, feel free to reach out to us. We’re always here to help you get the most out of GHP X. Our team is dedicated to providing you with the best experience possible.
-        </p>
-        <div class="button-container">
-            <a href="mailto:support@ghpx.com" class="button">Contact Support</a>
+        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-rocket"></i>
+          <h4>Blazing Fast</h4>
+          <p>Instant execution, optimized threading, no crashes.</p>
         </div>
+        <div class="feature hvr-grow-shadow" data-aos="fade-up" data-aos-delay="500">
+          <i class="fas fa-code"></i>
+          <h4>Full Script Support</h4>
+          <p>Runs nearly every Lua/U scripts used in the Roblox community.</p>
+        </div>
+      </div>
     </section>
 
+    <section class="changelog glass" data-aos="fade-up">
+      <h3>Changelog</h3>
+      <ul>
+        <li><strong>[v1.3.3]</strong> Added whitelist API integration and enhanced anti-crash protection.</li>
+        <li><strong>[v1.3.2]</strong> Improved script injection speed and reduced memory usage.</li>
+        <li><strong>[v1.3.1]</strong> Added new UI customization panel and theme switching.</li>
+        <li><strong>[v1.3.0]</strong> Patched detection vectors to improve bypass methods.</li>
+        <li><strong>[v1.2.9]</strong> Upgraded auto-update system for future-proofing.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="glass">
+    <p>© 2025 GHP X. All rights reserved. | <a href="https://github.com/ghp-x">GitHub</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+    const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 80);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 40);
+      } else {
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, 500);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(type, 1000);
+    });
+  </script>
 </body>
 </html>
