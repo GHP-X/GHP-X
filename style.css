@@ -21,7 +21,7 @@ body {
 }
 
 .background {
-  background: url('https://media.tenor.com/images/black-hole-steam-wallpaper.gif') repeat fixed center center;
+  background: url('https://media.giphy.com/media/crwwGNqIMccLXpD10F/giphy.gif') repeat fixed center center;
   background-size: cover;
   position: fixed;
   z-index: -1;
@@ -30,6 +30,7 @@ body {
   filter: blur(3px) brightness(0.9);
   animation: bgScroll 60s linear infinite;
 }
+
 
 @keyframes bgScroll {
   0% { background-position: 0 0; }
