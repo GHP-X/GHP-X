@@ -9,31 +9,25 @@
   <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
   <div class="background"></div>
 
   <header class="glass">
-    <div class="container">
-      <h1>Welcome to <span class="highlight">GHP X</span></h1>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Download</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="burger" onclick="toggleNav()">
-          <div></div><div></div><div></div>
-        </div>
-      </nav>
-    </div>
+    <h1>Welcome to <span class="highlight">GHP X</span></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <section class="hero fade-in">
       <h2>The safest and most powerful Roblox scripting utility</h2>
-      <p>Maximum control and stability for all Roblox scripts – free forever.</p>
-      <a href="#" class="cta-button"><i class="fas fa-download"></i> Download Now</a>
+      <p>GHP X gives you maximum control and stability for all Roblox scripts – completely free of charge.</p>
+      <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Download Now</a>
     </section>
 
     <section class="features fade-in">
@@ -52,7 +46,7 @@
         <div class="feature">
           <i class="fas fa-code"></i>
           <h4>Full Script Support</h4>
-          <p>Supports all major script formats.</p>
+          <p>Supports nearly all popular script formats.</p>
         </div>
       </div>
     </section>
@@ -63,14 +57,12 @@
   </footer>
 
   <script>
-    function toggleNav() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-
     window.addEventListener('scroll', () => {
       document.querySelectorAll('.fade-in').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
       });
     });
   </script>
