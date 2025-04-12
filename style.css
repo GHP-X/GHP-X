@@ -1,150 +1,171 @@
+/* Base Style */
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #0c0c0c;
-  color: white;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.background {
-  background: url('https://media.giphy.com/media/crwwGNqIMccLXpD10F/giphy.gif') repeat fixed center center;
-  background-size: cover;
-  position: fixed;
-  z-index: -1;
-  inset: 0;
-  opacity: 0.2;
-  filter: blur(3px) brightness(0.9);
-}
-
-header, footer {
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
   padding: 1.5rem;
-  text-align: center;
-  animation: fadeSlideDown 1s ease forwards;
+  border-radius: 20px;
+  margin: 1rem auto;
+  max-width: 1000px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInGlass 1.2s ease-in-out;
 }
 
-header nav ul {
+@keyframes fadeInGlass {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Header Title Highlight */
+header h1 span.highlight {
+  color: #00d2ff;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  list-style: none;
   padding: 0;
   margin-top: 1rem;
-  flex-wrap: wrap;
 }
-
-nav a {
-  color: cyan;
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
   text-decoration: none;
-  font-weight: bold;
+  color: white;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
-nav a:hover {
-  color: white;
-  text-shadow: 0 0 10px cyan;
+nav ul li a:hover {
+  color: #00d2ff;
 }
 
+/* Hero Section */
 .hero {
   text-align: center;
-  margin: 12vh auto;
-  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Call-to-Action Button */
 .cta-button {
-  background: cyan;
-  color: black;
-  padding: 1rem 2rem;
-  margin-top: 2rem;
+  background-color: #00d2ff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  color: white;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px cyan;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .cta-button:hover {
-  background: white;
-  color: black;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px white;
+  transform: scale(1.1);
+  background-color: #008fb2;
 }
 
-.features {
-  padding: 5rem 2rem;
-  text-align: center;
-}
+/* Feature List */
 .feature-list {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .feature {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 2rem;
-  max-width: 260px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-  transition: transform 0.3s ease;
-}
-.feature:hover {
-  transform: translateY(-10px);
-}
-.feature i {
-  font-size: 2.2rem;
-  color: cyan;
-  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1 1 250px;
+  transition: all 0.4s ease;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
+.feature:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Changelog Section */
+.changelog ul {
+  padding-left: 1.5rem;
+}
+
+.changelog li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
-  margin-top: 3rem;
+  padding: 1rem;
   font-size: 0.9rem;
 }
 
-.glass {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+/* Hover Effects (Hover.css) */
+.hvr-grow-shadow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Animations */
-@keyframes fadeSlideDown {
-  from {
+.hvr-grow-shadow {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Animated Title Typing Effect */
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* Footer Link Hover Effect */
+footer a {
+  color: #00d2ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #008fb2;
+  text-decoration: underline;
+}
+
+/* Changelog Hover Effect */
+.changelog li:hover {
+  background-color: rgba(0, 210, 255, 0.1);
+  transform: translateX(5px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Add Additional Features & Animations */
 .fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease-out;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.highlight {
-  color: cyan;
-  text-shadow: 0 0 10px cyan;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .feature-list {
-    flex-direction: column;
-    align-items: center;
-  }
-  header nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
+  animation: fadeIn 1.5s ease-in-out;
 }
