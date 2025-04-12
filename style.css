@@ -1,39 +1,61 @@
-/* Base Styles */
+/* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: #2c2c2c;
   color: #fff;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  position: relative;
+  height: 100vh;
 }
 
-header {
-  text-align: center;
-  padding: 2rem;
-  animation: fadeIn 1.5s ease-in-out;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('your-abstract-background.gif') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
 }
 
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin: 1rem auto;
+  max-width: 1000px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
 header h1 span.highlight {
   color: #00d2ff;
 }
 
-/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   padding: 0;
 }
+
 nav ul li {
   margin: 0 15px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: 600;
   transition: color 0.3s ease;
 }
+
 nav ul li a:hover {
   color: #00d2ff;
 }
@@ -45,7 +67,6 @@ nav ul li a:hover {
   animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Call-to-Action Button */
 .cta-button {
   background-color: #00d2ff;
   padding: 0.75rem 1.5rem;
@@ -56,12 +77,13 @@ nav ul li a:hover {
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 .cta-button:hover {
   transform: scale(1.1);
   background-color: #008fb2;
 }
 
-/* Feature List */
+/* Features Section */
 .feature-list {
   display: flex;
   justify-content: space-around;
@@ -77,7 +99,6 @@ nav ul li a:hover {
   text-align: center;
   flex: 1 1 250px;
   transition: all 0.4s ease;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 .feature:hover {
@@ -93,24 +114,12 @@ nav ul li a:hover {
 .changelog li {
   margin-bottom: 0.75rem;
   line-height: 1.5;
-  animation: fadeIn 1s ease-in-out;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-}
-
-footer a {
-  color: #00d2ff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #008fb2;
-  text-decoration: underline;
 }
 
 /* Hover Effects (Hover.css) */
@@ -125,7 +134,7 @@ footer a:hover {
   transition: all 0.3s ease;
 }
 
-/* Animation */
+/* Animation Keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -137,18 +146,21 @@ footer a:hover {
   }
 }
 
-/* Glass Effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 1.5rem;
-  border-radius: 20px;
-  margin: 1rem auto;
-  max-width: 1000px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+/* Footer Link Hover Effect */
+footer a {
+  color: #00d2ff;
+  text-decoration: none;
 }
 
-/* Fade-In Effect */
-.fade-in {
-  animation: fadeIn 1.5s ease-in-out;
+footer a:hover {
+  color: #008fb2;
+  text-decoration: underline;
+}
+
+/* Changelog Hover Effect */
+.changelog li:hover {
+  background-color: rgba(0, 210, 255, 0.1);
+  transform: translateX(5px);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
