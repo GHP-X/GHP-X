@@ -27,7 +27,9 @@ body {
   opacity: 0.25;
   z-index: -1;
 }
-
+.features {
+  margin-top: -2rem;
+}
 /* Glassmorphism Cards */
 .glass {
   background: rgba(255, 255, 255, 0.15);
