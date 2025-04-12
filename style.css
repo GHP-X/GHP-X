@@ -21,7 +21,7 @@ body {
 }
 
 .background {
-  background: url('https://tenor.com/de/view/black-hole-steam-wallpaper-gif-11280767995809854783') repeat fixed center center;
+  background: <div class="tenor-gif-embed" data-postid="11280767995809854783" data-share-method="host" data-aspect-ratio="1.59615" data-width="100%"><a href="https://tenor.com/view/black-hole-steam-wallpaper-gif-11280767995809854783">Black Hole Steam GIF</a>from <a href="https://tenor.com/search/black+hole-gifs">Black Hole GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> repeat fixed center center;
   background-size: cover;
   position: fixed;
   z-index: -1;
