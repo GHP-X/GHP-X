@@ -8,9 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2e8e6b76d.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <!-- Background -->
   <div class="background"></div>
 
   <header class="glass">
@@ -60,6 +58,7 @@
   </footer>
 
   <script>
+    // Scroll animation
     window.addEventListener('scroll', () => {
       document.querySelectorAll('.fade-in').forEach(el => {
         const top = el.getBoundingClientRect().top;
@@ -68,9 +67,8 @@
         }
       });
     });
-  </script>
 
-  <script>
+    // Typing animation
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
     const textArray = ["The safest executor.", "Super fast scripts.", "Zero crashes. Ever."];
@@ -103,6 +101,5 @@
       setTimeout(type, 1000);
     });
   </script>
-
 </body>
 </html>
