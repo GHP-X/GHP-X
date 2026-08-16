@@ -1,16 +1,22 @@
-## Hi there 👋
+# GHP-X
 
-<!--
-**GHP-X/GHP-X** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Developer focused on **ComfyUI, generative AI, diffusion models, and AI tooling**.
 
-Here are some ideas to get you started:
+I build custom ComfyUI nodes, workflow utilities, and experimental pipelines for local AI image generation. My work focuses on making complex workflows more modular, efficient, controllable, and easier to use.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Focus
+
+`ComfyUI` `FLUX` `Stable Diffusion` `LoRA` `ControlNet` `Python` `PyTorch` `CUDA`
+
+### Interests
+
+* ComfyUI custom nodes and extensions
+* Diffusion and generative AI workflows
+* AI image generation and conditioning
+* Workflow automation and tooling
+* Model and LoRA integration
+* Local GPU inference and optimization
+
+I enjoy taking complicated AI workflows, figuring out how they work under the hood, and turning them into practical tools.
+
+Always experimenting, building, and improving.
